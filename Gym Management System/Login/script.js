@@ -1,4 +1,4 @@
-var btn=document.getElementById("btn");
+var btn=document.getElementById("ui");
 var User=document.getElementById("User");
 var pass=document.getElementById("pass");
 
@@ -8,8 +8,8 @@ var pass=document.getElementById("pass");
 
 btn.onclick=function(){
     if(User.value==123 && pass.value==123){
-       
-        window.location.assign("./home.html")
+        alert("登录成功！")
+       location.href="../Home/index.html";
     }
 
     else{
