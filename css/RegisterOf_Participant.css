@@ -1,0 +1,645 @@
+:root{
+    --black-color: #111111;
+    --orange-color: #f36100;
+    --white-color: #ffffff;
+    --sameWhite-color:#CCC;
+}
+
+
+
+.container-Page {
+    background: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 31px 73px 0 97px;
+    width: 1100px;
+    box-sizing: border-box;
+  }
+  
+
+  .become-a-member {
+    position: relative;
+    margin-bottom: 52px;
+    display: inline-flex;
+   left: -200px;
+    align-self: flex-start;
+    justify-content: center;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 1.6px;
+    color: #DEBA3B;
+  }
+  /* .register {
+    position: absolute;
+    left: 23px;
+    top: 182px;
+    overflow-wrap: break-word;
+    font-family: 'Monument Extended', 'Roboto Condensed';
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: #1A1363;
+  } */
+  /* .admiin-profile {
+    margin-top: 6px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  /* } */
+  /* .juan-delacruzgmail-com {
+    position: absolute;
+    left: 50%;
+    top: 168px;
+    translate: -50% 0;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  /* } */
+
+  /* .logout {
+    position: absolute;
+    left: 75px;
+    bottom: 31px;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  }   */
+  .group-4 {
+    box-shadow: 0px 4px 3px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 0 0 10px;
+    background: #ECE9E9;
+    position: relative;
+    margin-bottom: 19px;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    padding: 9px 0 9px 13px;
+    width: 197px;
+    box-sizing: border-box;
+  }
+  .dashboard {
+    margin-bottom: 2px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+  .pencil-square {
+    margin-right: 19px;
+    width: 17px;
+    height: 17px;
+  }
+  .vector-4 {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+  }
+  .group-6 {
+    margin: 0 16px 1px 0;
+    width: 20px;
+    height: 20px;
+  }
+  .box-arrow-right {
+    position: absolute;
+    left: 39px;
+    bottom: 29px;
+    width: 20px;
+    height: 20px;
+  }
+  .three-dots-vertical {
+    margin-left: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 3.8px;
+    height: 16.3px;
+    box-sizing: border-box;
+  }
+  .vector-9 {
+    width: 3.8px;
+    height: 16.3px;
+  }
+  .registration {
+    margin-top: 2px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 10px;
+    color: #1A1363;
+  }
+  .container {
+    margin-bottom: 17px;
+    display: flex;
+    flex-direction: row;
+    width: 562px;
+    box-sizing: border-box;
+  }
+  .name-of-participant {
+    margin-right: 12px;
+    width: 300px;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    color: #2B2B2B;
+  }
+  .name {
+    border-radius: 12px;
+    background: #E9E9E9;
+    margin-right: 15px;
+    width: 297px;
+    height: 33px;
+    margin-left: 20px;
+  }
+  .email-address {
+    margin: 0 12px 0.5px 0;
+    display: inline-block;
+    width: 297px;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    color: #2B2B2B;
+  }
+  .Email {
+    border-radius: 12px;
+    background: #E9E9E9;
+    margin: 2px 15px 0 0;
+    width: 297px;
+    height: 33px;
+    margin-left: 20px;
+  }
+  .plan {
+    margin-right: 12px;
+    width: 153px;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    color: #2B2B2B;
+  }
+  .plain {
+    border-radius: 12px;
+    background: #E9E9E9;
+    width: 281px;
+    height: 33px;
+  }
+  .price {
+    position: absolute;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+
+    color: #2B2B2B;
+    left: 200px;
+  }
+  .priceInput {
+    border-radius: 12px;
+    background: #E9E9E9;
+    width: 241px;
+    height: 33px;
+  }
+  .date-of-join {
+    position: absolute;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    color: #2B2B2B;
+    margin-right: 70px;
+    right: 260px;
+    width: 200px;
+  }
+  .journal-check {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-no {
+    position: absolute;
+    margin-top: 0.5px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    left: 60px;
+    color: #2B2B2B;
+  }
+  .ContactNo {
+    border-radius: 12px;
+    background: #E9E9E9;
+    margin-bottom: 2px;
+    width: 250px;
+    height: 33px;
+  }
+  .btn_adding {
+    border-radius: 12px;
+    background: var(--orange-color);
+    margin-right: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3px 0;
+    width: 192px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+  }
+  .avail-membership {
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  .btn_Cancile{
+    border-radius: 12px;
+    border: 2px solid #1A1363;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px 19px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    /* transition: ease-out all .2s; */
+  }
+
+  .btn_Cancile:hover{
+    border: 1px solid var(--orange-color);
+    /* transition: ease-out all .2s; */
+
+  }
+  .cancel {
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    color: #1A1363;
+  }
+
+
+  .container {
+    margin-bottom: 22.5px;
+    display: flex;
+    flex-direction: row;
+    width: 562px;
+    box-sizing: border-box;
+  }
+  .body {
+    position: relative;
+    margin-bottom: 93.9px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-15 {
+    margin: 0 84.6px 18px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .payment {
+    margin: 2px 0 3px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  }
+  .plan-16 {
+    margin: 2px 0 3px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  }
+  .credit-card-2-back {
+    margin-right: 14px;
+    width: 20px;
+    height: 20px;
+  }
+  .journal-check-19 {
+    margin-right: 16px;
+    width: 20px;
+    height: 20px;
+  }
+  .inventory {
+    margin: 1.3px 0 0.4px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  }
+  .material-symbolsinventory-2-outline {
+    margin-right: 15.7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 16.7px;
+    height: 16.7px;
+    box-sizing: border-box;
+  }
+  .vector-23 {
+    width: 16.7px;
+    height: 16.7px;
+  }
+  .report {
+    margin-bottom: 1.5px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  }
+  .view-members {
+    margin-top: 0.5px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  }
+  .coaches {
+    margin: 3px 0 2px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 10px;
+    color: #FFFFFF;
+  }
+  .people {
+    margin: 0 15px 0.5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20px;
+    height: 15px;
+    box-sizing: border-box;
+  }
+  .vector-24 {
+    width: 20px;
+    height: 15px;
+  }
+  .book {
+    margin: 0.1px 15px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 20px;
+    height: 16.4px;
+    box-sizing: border-box;
+  }
+  .vector-25 {
+    width: 20px;
+    height: 16.4px;
+  }
+  .vector-26 {
+    margin-right: 14px;
+    width: 20px;
+    height: 20px;
+  }
+  .group-66 {
+    position: relative;
+    margin: 0 1.9px 29px 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 29px 0 36px 0;
+    width: 617.1px;
+    box-sizing: border-box;
+  }
+/*   
+  .feedback {
+    margin: 0.1px 10.5px 0 0;
+    display: inline-block;
+    width: 99.7px;
+    overflow-wrap: break-word;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    color: #1A1363;
+  } */
+
+  .stamina-fitness {
+    position: relative;
+    margin-right: 23px;
+    width: 388.7px;
+    overflow-wrap: break-word;
+    font-family: 'Monument Extended', 'Roboto Condensed';
+    font-weight: 400;
+    font-size: 20px;
+    color: #1A1363;
+  }
+  /* .6168062602170945636782586877860459-n-4 {
+    background: url('https://fn12.com/api/clusters/cluster-fn12-prod-europe-west1/projects/CQYCg9Y2haRtWfmBnkjNzV/assets/images/ca2006d3c090505d7151fbab3387006eb0ee3a29?Expires=1711136412&KeyName=fn12-cdn&Signature=FAPAqsgufMR2pfNQfYPl2B2kl7U=') 50% / cover no-repeat;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 78px;
+    height: 111px;
+  }/*  
+  */
+  /* .rinotification-2-fill {
+    margin-bottom: 0.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 19.2px;
+    height: 20.6px;
+    box-sizing: border-box;
+  }  */
+  .vector-27 {
+    width: 19.2px;
+    height: 20.6px;
+  }
+  .container-28 {
+    margin: 0 55.9px 21.1px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-29 {
+    margin: 0 37.9px 11px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .Date-of-join {
+    border-radius: 12px;
+    background: #E9E9E9;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 7px 14px 6px 14px;
+    width: 250px;
+    height: 33px;
+    box-sizing: border-box;
+  }
+  .container-31 {
+    margin: 0 59.2px 19px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-32 {
+    margin-right: 70.2px;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-33 {
+    margin: 0 40px 18px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-34 {
+    position: relative;
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 408.5px;
+    box-sizing: border-box;
+  }
+  .container-35 {
+    border-radius: 18px 0 0 18px;
+    background: #1A1363;
+    position: relative;
+    margin-bottom: 39px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 86px 0 254.5px 0;
+    width: 226px;
+    box-sizing: border-box;
+  }
+  .container-36 {
+    margin: 0 59.3px 19.5px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-37 {
+    margin: 0 33.7px 19px 0;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-38 {
+    margin-bottom: 34px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .container-39 {
+    margin: 13.9px 0 11px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 129.3px;
+    height: fit-content;
+    box-sizing: border-box;
+  }
+  .Text_plain_price {
+    position: relative;
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .container-41 {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    background: #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 43px 34px 16px 27px;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  .container-42 {
+    position: relative;;
+    margin: 0 3px 6px 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 405.8px;
+    box-sizing: border-box;
+  }
+  .container-43 {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    width: fit-content;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .container-44 {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 4px 4px 4px 0px rgba(77, 149, 83, 0.11);
+    border-radius: 18px;
+    background: #ECE9E9;
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 58px 222px 23px;
+    box-sizing: border-box;
+  }
+
+  input{
+    outline: none;
+    font-family: 'Roboto', sans;
+    border: none;
+    
+  }
+  input::placeholder{
+    text-align: center;
+    color: #4b4b4b;
+  }
