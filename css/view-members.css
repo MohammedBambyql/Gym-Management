@@ -1,0 +1,43 @@
+:root{
+    --black-color: #111111;
+    --orange-color: #f36100;
+    --white-color: #ffffff;
+    --sameWhite-color:#CCC;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+ 
+}
+body{
+    background-color: var(--black-color);
+}
+
+
+.text_part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0 30px 0px ;
+
+
+}
+h2{
+    color:var(--orange-color) ;
+    font-weight: 800;
+}
+
+.center{
+    padding:30px;
+    margin: 20px;
+    background: var(--sameWhite-color);
+    border: 1px solid var(--sameWhite-color);
+}
+.container{
+    height: 100vh;
+}
