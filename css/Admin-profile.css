@@ -1,8 +1,14 @@
+:root{
+  --black-color: #111111;
+  --orange-color: #f36100;
+  --white-color: #ffffff;
+  --sameWhite-color:#CCC;
+}
 body{
-  background-color: #ECE9E9;
+  background-color: var(--black-color);
 }
 .title{
-  color: #1A1363;
+  color: var(--orange-color);
   padding-left: 85px;
 }
 #container1{
@@ -23,39 +29,45 @@ body{
   height: 320px;
   padding: 20px 20px;
 }
-#btn-blue{
+#btn_blue{
   margin-top: 20px;
-  background-color: #1A1363;
+  background-color: var(--orange-color);
   border-radius: 10px;
   color: #FFFFFF;
   width: 350px;
 }
-#btn-blue-small{
+#btn_blue_small{
   margin-top: 20px;
-  background-color: #1A1363;
+  background-color: var(--orange-color);
   border-radius: 10px;
   color: #FFFFFF;
   width: 100px;
   margin-left: auto;
 
 }
-#btn-white-small{
-  color: #1A1363;
+#btn_white_small{
+  color: var(--orange-color);
   border-radius: 10px;
-  border-color: #1A1363;
+  border-color: var(--orange-color);
   background-color: #FFFFFF;
   width: 100px;
   margin-left: auto;
+}
+#btn_blue:hover ,#btn_blue_small:hover{
+  background-color: #bb4b00;
+}
+#btn_white_small:hover{
+  background-color: #cfcdcd;
 }
 #form-container{
   text-align: end;
 }
 label{
-  color: #2B2B2B;
+  color: var(--orange-color);
   font-weight: bold;
 }
 input{
   border-radius: 10px;
-  background-color: #E9E9E9;
+  background-color: var(--sameWhite-color);
   width: 400px;
 }
