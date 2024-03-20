@@ -1,6 +1,5 @@
 * {
     font-family: 'Poppins';
-
 }
 
 .group-1 {
@@ -61,6 +60,33 @@
     justify-content: space-between;
     width: 547.8px;
     box-sizing: border-box;
+}
+
+.inputName {
+    border-radius: 12px;
+    border: 1px solid #4B4B4B;
+    background: #FFFFFF;
+    margin-right: 26px;
+    width: 190px;
+    height: 40px;
+}
+
+.inputValidity {
+    border-radius: 12px;
+    border: 1px solid #4B4B4B;
+    background: #FFFFFF;
+    width: 346px;
+    height: 42px
+}
+
+.inputAmount {
+
+    border-radius: 12px;
+    border: 1px solid #4B4B4B;
+    background: #FFFFFF;
+    margin: 0 15.4px 31px 0.4px;
+    width: 346px;
+    height: 42px;
 }
 
 .container-2 {
@@ -168,6 +194,7 @@
     justify-content: center;
     padding: 3px 17.1px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .save {
@@ -204,6 +231,10 @@
     font-weight: 400;
     font-size: 16px;
     color: #2B2B2B;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .plan-name-7 {

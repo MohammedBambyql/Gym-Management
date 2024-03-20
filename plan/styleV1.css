@@ -1,0 +1,83 @@
+* {
+    font-family: 'Poppins';
+}
+
+:root {
+    --black-color: #111111;
+    --orange-color: #f36100;
+    --white-color: #ffffff;
+    --sameWhite-color: #ccc;
+    --blue-color: #332F64;
+}
+
+div>div {
+    margin-bottom: 20px;
+    direction: rtl;
+}
+
+.container {
+    box-shadow: 0px 4px 4px 0px rgba(218, 24, 24, 0.25), 4px 4px 4px 0px rgba(77, 149, 83, 0.11);
+    border-radius: 18px;
+    background: var(--sameWhite-color);
+    position: relative;
+    margin-bottom: 1222.9px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    padding: 71px 0 41px 0;
+    width: 930px;
+    box-sizing: border-box;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.PlanContainer {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    background: var(--blue-color);
+    position: relative;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px 13.6px 28px 24px;
+    width: 615px;
+    height: 272px;
+    box-sizing: border-box;
+}
+
+.PlanName {
+    margin: 20px;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.PlanTable {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: #77749B;
+    position: relative;
+    margin-right: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 18.1px 100px 24px;
+    width: 615px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+}
