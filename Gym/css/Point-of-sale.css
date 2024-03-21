@@ -1,0 +1,59 @@
+body{
+  background-color: #ECE9E9;
+}
+#title_Point_of_sale{
+  color: #DEBA3B;
+  margin-left: 50px;
+}
+#title_add_payment{
+  color: #1A1363;
+  margin-left: 50px;
+}
+#container{
+  border-radius: 10px;
+  width: 700px;
+  background-color: #FFFFFF;
+  height: 250px;
+  margin-left: 50px;
+}
+.row{
+  padding-top: 20px;
+}
+label{
+  font-weight: bold;
+  color: #2B2B2B;
+}
+#btn-blue-small{
+  /* margin-top: 20px; */
+  background-color: #1A1363;
+  border-radius: 10px;
+  color: #FFFFFF;
+  width: 100px;
+  margin-right: 10px;
+
+}
+#btn-white-small{
+  color: #1A1363;
+  border-radius: 10px;
+  border-color: #1A1363;
+  background-color: #FFFFFF;
+  width: 100px;
+  margin-right: 10px;
+}
+#tow_btn{
+  display: flex;
+  justify-content: end;
+}
+input{
+  border-radius: 10px;
+  background-color: #E9E9E9;
+}
+#name_of_member_input{
+  width: 300px;
+}
+#plan_input{
+  width: 100px;
+}
+#price_input{
+  width: 100px;
+}

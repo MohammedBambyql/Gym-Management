@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/Gym Management System/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/Gym Management System/css/Admin-profile.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/Admin-profile.css">
 </head>
 <body>
   <h1 class="title">Admin Information</h1>
@@ -15,9 +15,8 @@
         <div id="container1" class="container">
           <div class="row">
             <div class="col" style="text-align: center;">
-              <img  src="/Gym Management System/img/PersonCircle.png" width="50px" height="50px"><br>
-              <button type="button" style="border: none; background-color: #ffffff;"><img  src="/Gym Management System/img/PencilSquare.png" width="15px" height="15px"></button>
-          <span>Update Profile</span>
+              <button id="btn_update_profile" type="button"><img  src="/image/PersonCircle.png" width="50px" height="50px"></button><br>
+              <button id="btn_update_profile" type="button"><img  src="/image/PencilSquare.png" width="15px" height="15px"> Update Profile</button>
             </div>
           </div>
           <div class="row" style="padding-top: 30px;">
@@ -37,35 +36,35 @@
             </div>
           </div>
         </div>
-        <button id="btn-blue">Register New Admin Account</button>
+        <button id="btn_blue">Register New Admin Account</button>
       </div>
       <div class="col-5">
         <div id="container2">
           <form action="" method="post">
-            <label for="Username">Username</label><br>
-            <input type="text" id="Username"><br>
-            <label for="contact-no">Contact no.</label><br>
-            <input type="number" name="" id="contact-no"><br>
-            <label for="email">Email Address:</label><br>
-            <input type="email" name="" id="email"><br>
+            <label for="Username_txt">Username</label><br>
+            <input type="text" name="Username_txt" id="Username_txt" required><br>
+            <label for="contact_no_txt">Contact no.</label><br>
+            <input type="number" name="contact_no_txt" id="contact_no_txt" required><br>
+            <label for="email_txt">Email Address:</label><br>
+            <input type="email" name="email_txt" id="email_txt" required><br>
             <div id="form-container">
-              <input id="btn-blue-small" type="submit" value="Save">
-              <button id="btn-white-small">Cancel</button>
+              <input id="btn_blue_small" type="submit" value="Save">
+              <button id="btn_white_small">Cancel</button>
             </div>
           </form>
         </div>
         <div id="container3" style="margin-top: 20px;">
-          <h1 style="color: #1A1363; padding-left: 100px;">Password</h1>
+          <h1 style="color: #f36100; padding-left: 100px;">Password</h1>
             <form action="" method="post">
-              <label for="current-password">Current Password</label><br>
-              <input type="password" id="current-password"><br>
-              <label for="new-password">New Password</label><br>
-              <input type="password" name="" id="new-password"><br>
-              <label for="re-type-password">Re-type Password</label><br>
-              <input type="password" name="" id="re-type-password"><br>
+              <label for="current_password_txt">Current Password</label><br>
+              <input type="password" name="current_password_txt" id="current_password_txt" required><br>
+              <label for="new_password_txt">New Password</label><br>
+              <input type="password" name="new_password_txt" id="new_password_txt" required><br>
+              <label for="re_type_password_txt">Re-type Password</label><br>
+              <input type="password" name="re_type_password_txt" id="re_type_password_txt" required><br>
               <div id="form-container">
-                <input id="btn-blue-small" type="submit" value="Change">
-                <button id="btn-white-small">Clear</button>
+                <input id="btn_blue_small" type="submit" value="Change">
+                <button id="btn_white_small">Clear</button>
               </div>
             </form>
         </div>
