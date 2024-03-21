@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/Gym/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Gym/css/Point-of-sale.css">
+</head>
+<body>
+  <h2 id="title_Point_of_sale">Point of Sale</h2>
+  <h1 id="title_add_payment">Add Payment</h1><br>
+  <div id="container" class="container">
+    <form method="post">
+      <div class="row">
+        <div class="col-6">
+          <label for="name_of_member_input">Name of Member</label><br>
+          <input type="text" name="" id="name_of_member_input" required>
+        </div>
+        <div class="col-3">
+          <label for="plan_input">Plan</label><br>
+          <input type="text" name="" id="plan_input" required>
+        </div>
+        <div class="col-3">
+          <label for="price_input">Price</label><br>
+          <input type="text" name="" id="price_input" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+        <label for="date_of_join_input">Date of join</label><br>
+        <input type="date" name="" id="date_of_join_input" required>
+        </div>
+      </div>
+      <div id="tow_btn" class="row">
+        <input id="btn-blue-small" type="submit" value="Save">
+        <button id="btn-white-small">Cancel</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
