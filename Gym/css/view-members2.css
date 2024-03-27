@@ -1,0 +1,35 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: #77749B;
+  width: 700px;
+  padding: 20px 20px;
+  border-radius: 10px;
+}
+select{
+  background-color: #5D57A3;
+  border-radius: 10px;
+}
+input{
+  color: aliceblue;
+  background-color: #5D57A3;
+  border-radius: 10px;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+thead{
+  color: #FFFADF;
+}
+tbody{
+  color: #FFFADF;
+}
+#btn_previous,#btn_next{
+  background-color: #666385;
+  width: 100px;
+  border-radius: 10px;
+  margin-right: 10px;
+}

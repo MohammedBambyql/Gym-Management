@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/Gym/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Gym/css/view-members2.css">
+</head>
+<body>
+  <h1 class="text-center">Active Members</h1>
+  <div class="container">
+    <h2>Gym Members</h2>
+    <div>
+     
+      <p class="left">Show Entities</p>
+      <select class="left" name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <img class="right" src="/Gym/img/Vector.png" width="30px" height="30px" alt="">
+      <input class="right" type="text" id="search_input" name="search_input">
+      
+    </div>
+
+    <table class="table table-borderless">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Member ID</th>
+          <th scope="col">Date Enrolled</th>
+          <th scope="col">Date Expiration</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="table_body">
+        <tr>
+          <th>name</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>@mdo</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <button id="btn_next" class="right">Next</button>
+      <button id="btn_previous" class="right">Previous</button>
+    </div>
+  </div>
+
+  <script src="/Gym/javaScript/view-members.js"></script>
+</body>
+</html>
