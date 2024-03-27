@@ -7,13 +7,12 @@
  }
 
 .con{
-  padding: 20px;
+  padding:10px;
 }
 
 body {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 14px;
-	background: #f2f2f2;
 }
 .clearfix {
 	&:after {
@@ -26,7 +25,8 @@ body {
 	}
 }
 .form_wrapper {
-	background: #fff;
+	border-radius: 15px;
+	background: #332F64;
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
@@ -48,6 +48,7 @@ body {
     animation: expand 0.8s 0.6s ease-out forwards;
     opacity: 0;
 	h2 {
+		color: #efefef;
 		font-size: 1.5em;
 		line-height: 1.5em;
 		margin: 0;
@@ -66,6 +67,7 @@ form{
 }
 
 	h3 {
+
 		font-size: 1.1em;
 		font-weight: normal;
 		line-height: 1.5em;
@@ -323,4 +325,7 @@ input {
 }
 input::placeholder{
   text-align: center;
+}
+.button {
+	background-color: #DEBA3B;
 }

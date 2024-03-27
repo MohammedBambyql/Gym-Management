@@ -17,27 +17,31 @@ body{
     background: rgb(254, 254, 254);
 }
 
+head{
+	width: 100%;
+	height: fit-content;
 
-.text_part{
+}
+head text-part h2{
+	padding: 30px;
+	margin-top:20px ;
+	color: #f36100;
+	font-weight: 600;
+}
+
+.text-part{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 30px 0 30px 0px ;
-
-
-}
-h2{
-    color:var(--orange-color) ;
-    font-weight: 800;
+    margin: 50px 0px 50px 0px ;
 }
 
-.center{
-    padding:30px;
-    margin: 20px;
-    background: var(--sameWhite-color);
-    border: 1px solid var(--sameWhite-color);
+table{
+	padding:30px;
 }
+
+
 .container{
     height: 100vh;
 }
