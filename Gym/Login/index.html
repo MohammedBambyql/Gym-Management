@@ -16,31 +16,32 @@
     <body>
         <script src="https://www.unpkg.com/browse/react@18.2.0/umd/react.development.js"></script>
         <section>
-            <form method="post">
+            <form method="post" id="form">
                 <h1>تسجيل الدخول</h1>
                 <div class="inputbox">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input id="User" type="text" required>
+                    <input id="User" type="text" >
                     <label for="User">اسم المستخدم</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input id="pass" type="password" required>
+                    <input id="pass" type="password" >
                     <label for="pass">كلمة السر</label>
                 </div>
                 <div class="forget">
                     <label for=""><input type="checkbox">ذكرني</label>
                     <!-- <a href="#">Forget Password</a> -->
                 </div>
-                <!-- <button  id="btn" type="submit" >  <a class="btn" id="ui"> go </a></button> -->
-                <div class="btn">
-                    <a id="ui"> تسجيل </a>
-                </div>
-
-                <!-- <div class="register">
-                <p>Don't have a account <a href="#">Register</a></p>
-            </div> -->
-            </form>
+                <button  id="ui" type="submit" class="btn" >Submit </button>
+                <!-- <div class="btn">
+                    <a id="ui" t> تسجيل </a>
+                </div> -->
+                
+ 
+                 <div class="register">
+                <p id="error"></p>
+            </div> 
+           </form> 
 
         </section>
       
