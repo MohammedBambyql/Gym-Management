@@ -24,6 +24,10 @@
     .SectionText { grid-area: 1 / 1 / 6 / 6; 
       
         width: 100%;
+        font-family:"Times New Roman";
+        text-align: center;
+        margin: 0 auto;
+
     }
     .SectionTable { grid-area: 2 / 3 / 6 / 6;
  margin-top: 50px;
@@ -42,7 +46,7 @@
     .parent .SectionText {
         margin-top: 20px;
         display: flex;
-        justify-content:space-around ;
+        justify-content:center;
        
 
     }

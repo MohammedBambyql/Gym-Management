@@ -72,6 +72,8 @@ var tbody=document.getElementById("tbody");
 var type=document.getElementById("type");
 var currentRow=document.getElementById("currentRow");
 
+var chose=document.getElementById("select");
+var d=chose.options[chose.selectedIndex].text;
 
 // start 
 
@@ -89,7 +91,8 @@ sendBtn.addEventListener("click",function(){
         email:email.value,
         phone:number.value,
         age:age.value,
-        price:price.value
+        price:price.value,
+        coach:cho
     };
     if(type.value==="create"){
          data.push(user);
@@ -118,6 +121,7 @@ for(i=0;i<data.length;i++){
        <td>`+data[i].phone+`</td>
        <td>`+data[i].age+`</td>
        <td>`+data[i].price+`</td>
+       <td>`+data[i].coach+`</td>
        <td><button class="btn btn-danger" onclick="deletee(`+i+`)">delete</button></td>
        <td><button class="btn btn-info" onclick="updatee(`+i+`)">update</button></td>
        </tr>
@@ -154,6 +158,20 @@ function reset(){
     number.value="";
     age.value="";
     price.value="";
+
+}
+
+let cho;
+// function used in select option 
+function selectValue(){
+
+    var chose=document.getElementById("select");
+    var option =chose.options[chose.selectedIndex].text;
+    cho=option;
+    console.log(option);
+    console.log(cho);
+
+
 
 }
 
