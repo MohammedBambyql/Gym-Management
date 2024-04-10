@@ -52,6 +52,7 @@ nav {
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
+  position: relative;
 }
 nav ul {
   direction: rtl;
@@ -209,3 +210,16 @@ main {
 }
 
 
+.logout{
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
+  
+ 
+}
+.logout i {
+  padding:30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}

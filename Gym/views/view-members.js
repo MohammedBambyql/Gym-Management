@@ -121,7 +121,7 @@ for(i=0;i<data.length;i++){
        <td>`+data[i].phone+`</td>
        <td>`+data[i].age+`</td>
        <td>`+data[i].price+`</td>
-       <td>`+data[i].coach+`</td>
+       
        <td><button class="btn btn-danger" onclick="deletee(`+i+`)">delete</button></td>
        <td><button class="btn btn-info" onclick="updatee(`+i+`)">update</button></td>
        </tr>
