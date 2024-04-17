@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="/Gym/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/Gym/css/Admin-profile.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/Admin-profile.css">
 </head>
 <body>
   <h1 class="title">Admin Information</h1>
@@ -37,7 +37,10 @@
             </div>
           </div>
         </div>
-        <button id="btn-blue">Register New Admin Account</button>
+        
+        <button type="button" id="btn-blue" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Register New Admin Account
+        </button>
       </div>
       <div class="col-5">
         <div id="container2">
@@ -73,5 +76,44 @@
       </div>
     </div>
   </div>
+
+
+   <!-- Modal -->
+   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+   aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h1 class="modal-title fs-5" id="staticBackdropLabel">تسجيل مستخدم جديد</h1>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+         <!-- BODY section  -->
+         <div class="mb-3">
+           <label for="formGroupExampleInput" class="form-label">الاسم الكامل</label>
+           <input type="text" class="form-control" id="userName" placeholder=">الاسم الكامل">
+         </div>
+
+       
+
+         <div class="mb-3">
+           <label for="formGroupExampleInput2" class="form-label">اسم المستخدم</label>
+           <input type="text" class="form-control" id="userNumber" placeholder="ادخل اسم المستخدم">
+         </div>
+
+
+         <div class="mb-3">
+           <label for="formGroupExampleInput2" class="form-label">كلمه السر</label>
+           <input type="text" class="form-control" id="age" placeholder="ادخل كلمه السر">
+         </div>
+
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+         <button type="button" class="btn btn-primary" id="btn" data-bs-dismiss="modal">اضافه</button>
+       </div>
+     </div>
+   </div>
+ </div>
+<script src="../Libraries/Jq+bot/bootstrap.bundle.min.js"></script>
 </body>
 </html>
