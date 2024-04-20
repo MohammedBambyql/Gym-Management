@@ -1,16 +1,17 @@
-// fetch("").then((data) => {
-//   return data.json();
-// }).then((ObjectData) => {
-//   console.log(ObjectData[0].titles);
-//   let tableData = "";
-//   ObjectData.map((values)=> {
-//     tableData += `<tr>
-//     <td>`+values.title+`</td>
-//     <td>`+values.start_time+`</td>
-//     <td>`+values.end_time+`</td>
-//     <td>`+values.location+`</td>
-//     <td>`+values.description+`</td>
-//     </tr>`
-//   })
-//   document.getElementById("table_body").innerHTML = tableData;
-// })
+fetch("https://localhost:7209/api/Member").then((data) => {
+  return data.json();
+}).then((ObjectData) => {
+  // console.log(ObjectData,'m')
+  // console.log(ObjectData[0].titles);
+  let tableData = "";
+  ObjectData.map((values)=> {
+    tableData += `<tr>
+    <td>`+values.person.memberWeight+`</td>
+    <td>`+values.IDCard+`</td>
+    <td>`+values.Name+`</td>
+    <td>`+values.BirthDate+`</td>
+    <td>`+values.Email+`</td>
+    </tr>`
+  })
+  document.getElementById("table_body").innerHTML = tableData;
+})

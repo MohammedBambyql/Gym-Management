@@ -54,14 +54,9 @@
                 <thead>
                     <th>الرقم</th>
                     <th>اسم المتدرب</th>
-                    <th>العمر</th>
                     <th>رقم الموبايل</th>
-                    <th>الحالة</th>
-                    <th>نوع الاشتراك</th>
-                    <th>المبلغ المدفوع</th>
-                    <th>المبلغ المتبقي</th>
-                    <th>تاريخ الدفع</th>
-                    <th>المدرب</th>
+                    <th>يوم الميلاد</th>
+                    <th> الايميل</th>
                     <th>تعديل</th>
                     <th>حذف</th>
                 </thead>
@@ -71,28 +66,7 @@
                         <td>مفتي حخران</td>
                         <td>121</td>
                         <td>777</td>
-                        <td style="background-color: green;border-radius: 32px;color:white">نشط</td>
                         <td>شهري</td>
-                        <td>121$</td>
-                        <td>0$</td>
-                        <td>2024-02-02</td>
-                        <td>بيش</td>
-                        <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                id="Edit">تعديل</button></td>
-                        <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
-                                style="background-color: red;">حذف</button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>مفتي حخران</td>
-                        <td>121</td>
-                        <td>777</td>
-                        <td style="background-color: red;border-radius: 32px;color:white">غير نشط</td>
-                        <td>شهري</td>
-                        <td>121$</td>
-                        <td>0$</td>
-                        <td>2024-02-02</td>
-                        <td>بيش</td>
                         <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
                                 id="Edit">تعديل</button></td>
                         <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
@@ -109,7 +83,7 @@
         <!-- Button trigger modal -->
 
         <!-- Modal -->
-        <form action="" method="get">
+        <form id="form">
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -126,62 +100,25 @@
                                 <input type="text" class="form-control" id="name-member" placeholder=" ادخل الاسم"
                                     name="name-member">
                             </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">العمر</label>
-                                <input type="number" class="form-control" id="age" placeholder="ادخل العمر" name="age">
-                            </div>
+                            
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">رقم الجوال</label>
                                 <input type="number" class="form-control" id="phone" placeholder="ادخل الرقم"
                                     name="phone">
                             </div>
-                            <div>
-                                <select class="form-select" aria-label="Default select example" id="select"
-                                    onchange="option()">
-                                    <option selected>الحالة</option>
-                                    <option value="1">نشط</option>
-                                    <option value="2">غير نشط</option>
-                                </select>
-                                <input type="text" name="" id="type" value="create" style="display: none;">
-                                <input type="text" id="row" style="display: none;">
-                            </div>
 
-
-                            <div>
-                                <select class="form-select" aria-label="Default select example" id="select"
-                                    onchange="option()">
-                                    <option selected>نوع الاشتراك</option>
-                                    <option value="1">شهري</option>
-                                    <option value="2">اسبوعي</option>
-                                </select>
-                                <input type="text" name="" id="type" value="create" style="display: none;">
-                                <input type="text" id="row" style="display: none;">
-                            </div>
 
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">المبلغ المدفوع</label>
-                                <input type="number" class="form-control" id="amount-paid" placeholder="ادخل المبلغ"
-                                    name="amount-paid">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">المبلغ المتبقي</label>
-                                <input type="number" class="form-control" id="amount-remaining"
-                                    placeholder="ادخل المبلغ" name="amount-remaining">
+                                <label for="formGroupExampleInput" class="form-label"> يوم الميلاد</label>
+                                <input type="date" class="form-control" id="coach-name" placeholder="اسم المتدرب" name="birth_date">
                             </div>
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">تاريخ الدفع</label>
-                                <input type="date" class="form-control" id="date-amount-paid"
-                                    placeholder="اختار التاريخ الدفع "name=" date-amount-paid">
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">اسم المتدرب</label>
-                                <input type="text" class="form-control" id="coach-name" placeholder="اسم المتدرب">
+                                <label for="formGroupExampleInput" class="form-label">  الايميل</label>
+                                <input type="email" class="form-control" id="coach-name" placeholder=" ادخل الايميل" name="email">
                             </div>
                                 <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
-                            <button type="submit" class="btn btn-primary" id="btn"
+                            <button type="submit" class="btn btn-primary" id="submitButton"
                                 data-bs-dismiss="modal">موافق</button>
                         </div>
                     </div>
@@ -192,8 +129,8 @@
     </div>
 
 
-    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
-    <script src="../javaScript/newViwe.js"></script>
+    <!-- <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script> -->
+    <script src="../views/view.js"></script>
 
     <script>
 
