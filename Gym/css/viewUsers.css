@@ -24,3 +24,10 @@
 th ,tr {
     text-align: center;
 }
+ .text{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  
+    
+}
