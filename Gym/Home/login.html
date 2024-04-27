@@ -11,7 +11,6 @@
 </head>
 
 
-    <!-- partial:index.partial.html -->
 
     <body>
         <script src="https://www.unpkg.com/browse/react@18.2.0/umd/react.development.js"></script>
@@ -20,27 +19,22 @@
                 <h1>تسجيل الدخول</h1>
                 <div class="inputbox">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input id="User" type="text" >
-                    <label for="User">اسم المستخدم</label>
+                    <input id="username" type="text" >
+                    <label for="username">اسم المستخدم</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input id="pass" type="password" >
-                    <label for="pass">كلمة السر</label>
+                    <input id="password" type="password" >
+                    <label for="password">كلمة السر</label>
                 </div>
                 <div class="forget">
                     <label for=""><input type="checkbox">ذكرني</label>
-                    <!-- <a href="#">Forget Password</a> -->
                 </div>
-                <button  id="ui" type="submit" class="btn" >Submit </button>
-                <!-- <div class="btn">
-                    <a id="ui" t> تسجيل </a>
-                </div> -->
+                <button  id="ui" type="submit" class="btn" onclick="login()">Submit </button>
+                
                 
  
-                 <div class="register">
-                <p id="error"></p>
-            </div> 
+                 
            </form> 
 
         </section>
@@ -50,7 +44,6 @@
 
 <script src="../javaScript/login.js"></script>
  
-    <!-- partial -->
 
 
 
