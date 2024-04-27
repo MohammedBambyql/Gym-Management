@@ -9,11 +9,14 @@ fetch("https://localhost:7209/api/Person").then((data) => {
     <td>`+ values.phoneNumber + `</td>
     <td>`+ values.birthDate + `</td>
     <td>`+ values.email + `</td>
+    <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+    id="Edit">تعديل</button></td>
+    <td><button onclick="deleteRow(${values.personId})" type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
+    style="background-color: red;">حذف</button></td>
     </tr>`
   })
   document.getElementById("tbody").innerHTML = tableData;
 })
-
 
 function sendDataToAPI() {
   const form = document.getElementById('form');
@@ -30,7 +33,8 @@ function sendDataToAPI() {
     method: 'POST',
     body: JSON.stringify(formData),
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
     }
   })
     .then(response => response.json())
@@ -43,6 +47,82 @@ function sendDataToAPI() {
 }
 
 const submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', sendDataToAPI);
+submitButton.addEventListener('click', sendDataToAPI(personId));
+
+function deleteRow(personId) {
+  
+  fetch(`https://localhost:7209/api/Person/${personId}`, {
+    method: 'DELETE',
+  })
+  .then((response) => {
+    if (response.ok) {
+      console.log('تم حذف الصف بنجاح');
+      reloadTableData();
+    } else {
+      console.error('حدث خطأ أثناء حذف الصف');
+    }
+  })
+  .catch((error) => {
+    console.error('حدث خطأ في الاتصال بالـ API', error);
+  });
+}
+
+function reloadTableData() {
+  fetch("https://localhost:7209/api/Person")
+    .then((response) => response.json())
+    .then((data) => {
+      let tableData = "";
+      data.map((values) => {
+        tableData += `<tr>
+          <td>${values.personId}</td>
+          <td>${values.name}</td>
+          <td>${values.phoneNumber}</td>
+          <td>${values.birthDate}</td>
+          <td>${values.email}</td>
+          <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+          id="Edit">تعديل</button></td>
+          <td><button onclick="deleteRow(${values.personId})" type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
+          style="background-color: red;">حذف</button></td>
+        </tr>`;
+      });
+      document.getElementById("tbody").innerHTML = tableData;
+    });
+}
+
+function updateRow(personId) {
+  const nameInput = document.getElementById('name-member');
+  const phoneInput = document.getElementById('phone');
+  const birthDateInput = document.getElementById('birth-date');
+  const emailInput = document.getElementById('email');
+
+  const updatedData = {
+    name: nameInput.value,
+    phoneNumber: phoneInput.value,
+    birthDate: birthDateInput.value,
+    email: emailInput.value
+  };
+
+  fetch(`https://localhost:7209/api/Person/${personId}`, {
+    method: 'PUT', 
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(updatedData)
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('تم تحديث الصف بنجاح');
+        reloadTableData();
+      } else {
+        console.error('حدث خطأ أثناء تحديث الصف');
+      }
+    })
+    .catch(error => {
+      console.error('حدث خطأ في الاتصال بالـ API', error);
+    });
+}
+
+const form = document.getElementById('formUpdate');
+form.addEventListener('submit',updateRow(personId));
 
 
