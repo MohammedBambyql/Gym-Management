@@ -28,16 +28,27 @@
         <section>
           <table class="table">
             <thead>
-              <th>الرقم</th>
-              <th>اسم المستخدم</th>
-              <th>الاسم الكامل</th>
-              <th>كلمه السر </th>
+              <th>التعديل</th>
+              <th>الحذف</th>
+              <th>الايميل</th>
+              <th>اسم رقم الجوال</th>
+              <th> اسم المستخدم </th>
+              <th> الرقم </th>
               
     
               
             </thead>
-            <tbody id="tbody">
-    
+            <tbody id="table_body">
+              <tr>
+                <td><button type="button" data-bs-target="#staticBackdrop2" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
+                  id="Edit">تعديل</button></td>
+          <td><button  class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
+              style="background-color: red;" onclick="deleteRow(person.personId)">حذف</button></td>
+                <th>name</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+              </tr>
             </tbody>
     
           </table>
@@ -46,8 +57,7 @@
         </section>
     
     
-      
-    <!-- Modal -->
+    <form id="form"> 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -59,33 +69,69 @@
         <div class="modal-body">
           <!-- BODY section  -->
           <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">الاسم الكامل</label>
-            <input type="text" class="form-control" id="userName" placeholder="الاسم الكامل">
+            <label for="formGroupExampleInput" class="form-label">اسم المستخدم </label>
+            <input type="text" class="form-control" id="userName" placeholder=" اسم المستخدم">
           </div>
 
           <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">اسم المستخدم</label>
-            <input type="text" class="form-control" id="email" placeholder="اسم المستخدم">
+            <label for="formGroupExampleInput2" class="form-label"> رقم الجوال</label>
+            <input type="number" class="form-control" id="userNumber" placeholder=" رقم الجوال">
           </div>
 
 
           <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">كلمه السر</label>
-            <input type="text" class="form-control" id="userNumber" placeholder="كلمه السر">
+            <label for="formGroupExampleInput2" class="form-label">الايميل </label>
+            <input type="email" class="form-control" id="email" placeholder=" الايميل">
           </div>
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
-          <button type="button" class="btn btn-primary" id="btn" data-bs-dismiss="modal">اضافه</button>
+          <button type="button" class="btn btn-primary" id="submitButton" data-bs-dismiss="modal" onclick=" sendDataToAPI()">اضافه</button>
         </div>
       </div>
     </div>
   </div>
+</form> 
+<form id="formUpdate"> 
+  <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">اضافه مستخدم جديد</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- BODY section  -->
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">اسم المستخدم </label>
+          <input type="text" class="form-control" id="userName" placeholder=" اسم المستخدم">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"> رقم الجوال</label>
+          <input type="number" class="form-control" id="userNumber" placeholder=" رقم الجوال">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">الايميل </label>
+          <input type="email" class="form-control" id="email" placeholder=" الايميل">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+        <button type="button" class="btn btn-primary" id="submitButton" data-bs-dismiss="modal" onclick=" updateRow(person.personId)">اضافه</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form> 
 
         
     
-      </div>
 
      <script src="../Libraries/Jq+bot/bootstrap.bundle.min.js"></script>
 </body>

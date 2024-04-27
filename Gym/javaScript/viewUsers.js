@@ -1,17 +1,16 @@
-fetch("https://localhost:7209/api/Person").then((data) => {
+fetch("https://localhost:7209/api/User").then((data) => {
   return data.json();
 }).then((ObjectData) => {
   let tableData = "";
   ObjectData.map((values) => {
     tableData += `<tr>
-    <td>`+ values.personId + `</td>
-    <td>`+ values.name + `</td>
-    <td>`+ values.phoneNumber + `</td>
-    <td>`+ values.birthDate + `</td>
-    <td>`+ values.email + `</td>
+    <td>`+ values.person.personId + `</td>
+    <td>`+ values.person.name + `</td>
+    <td>`+ values.person.phoneNumber + `</td>
+    <td>`+ values.person.email + `</td>
     <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
     id="Edit">تعديل</button></td>
-    <td><button onclick="deleteRow(${values.personId})" type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
+    <td><button onclick="deleteRow(${values.person.personId})" type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
     style="background-color: red;">حذف</button></td>
     </tr>`
   })
@@ -29,7 +28,7 @@ function sendDataToAPI() {
 
   console.log(formData);
 
-  fetch('https://localhost:7209/api/Person', {
+  fetch('https://localhost:7209/api/User', {
     method: 'POST',
     body: JSON.stringify(formData),
     headers: {
@@ -47,11 +46,11 @@ function sendDataToAPI() {
 }
 
 const submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', sendDataToAPI(personId));
+submitButton.addEventListener('click', sendDataToAPI());
 
 function deleteRow(personId) {
   
-  fetch(`https://localhost:7209/api/Person/${personId}`, {
+  fetch(`https://localhost:7209/api/User/${personId}`, {
     method: 'DELETE',
   })
   .then((response) => {
@@ -74,35 +73,32 @@ function reloadTableData() {
       let tableData = "";
       data.map((values) => {
         tableData += `<tr>
-          <td>${values.personId}</td>
-          <td>${values.name}</td>
-          <td>${values.phoneNumber}</td>
-          <td>${values.birthDate}</td>
-          <td>${values.email}</td>
-          <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-          id="Edit">تعديل</button></td>
-          <td><button onclick="deleteRow(${values.personId})" type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
-          style="background-color: red;">حذف</button></td>
-        </tr>`;
+    <td>`+ values.person.personId + `</td>
+    <td>`+ values.person.name + `</td>
+    <td>`+ values.person.phoneNumber + `</td>
+    <td>`+ values.person.email + `</td>
+    <td><button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+    id="Edit">تعديل</button></td>
+    <td><button onclick="deleteRow(${values.person.personId})" type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
+    style="background-color: red;">حذف</button></td>
+    </tr>`
       });
       document.getElementById("tbody").innerHTML = tableData;
     });
 }
 
 function updateRow(personId) {
-  const nameInput = document.getElementById('name-member');
-  const phoneInput = document.getElementById('phone');
-  const birthDateInput = document.getElementById('birth-date');
+  const nameInput = document.getElementById('userName');
+  const phoneInput = document.getElementById('userNumber');
   const emailInput = document.getElementById('email');
 
   const updatedData = {
     name: nameInput.value,
     phoneNumber: phoneInput.value,
-    birthDate: birthDateInput.value,
     email: emailInput.value
   };
 
-  fetch(`https://localhost:7209/api/Person/${personId}`, {
+  fetch(`https://localhost:7209/api/User/${personId}`, {
     method: 'PUT', 
     headers: {
       'Content-Type': 'application/json'
@@ -122,7 +118,5 @@ function updateRow(personId) {
     });
 }
 
-const form = document.getElementById('formUpdate');
+const form = document.getElementById('form');
 form.addEventListener('submit',updateRow(personId));
-
-
