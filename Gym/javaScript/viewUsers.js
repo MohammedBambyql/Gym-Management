@@ -39,6 +39,7 @@ function sendDataToAPI() {
     .then(response => response.json())
     .then(data => {
       console.log('Response from API:', data);
+      reloadTableData();
     })
     .catch(error => {
       console.error('Error:', error);

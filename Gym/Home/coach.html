@@ -46,18 +46,28 @@
         <thead>
           <th>الرقم</th>
           <th>الاسم الكامل</th>
-          <th>الايميل</th>
           <th>الجوال</th>
-          <th>العمر</th>
+          <th>الايميل</th>
           <th>الراتب</th>
-          <th>التحكم</th>
-          <th></th> 
+          <th>الحذف</th>
+          <th>التعديل</th> 
 
           
         </thead>
         <tbody id="tbody">
-
-        </tbody>
+          <tr>
+              <td>1</td>
+              <td>مفتي حخران</td>
+              <td>121</td>
+              <td>777</td>
+              <td>شهري</td>
+              <td><button  class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
+                style="background-color: red;" onclick="deleteRow(employeeId)">حذف</button></td>
+              <td><button type="button" data-bs-target="#staticBackdrop2" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
+                      id="Edit">تعديل</button></td>
+              
+          </tr>
+      </tbody>
 
       </table>
 
@@ -68,6 +78,7 @@
     <!-- Button trigger modal -->
 
     <!-- Modal -->
+    <form id="form">
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -95,10 +106,59 @@
             </div>
 
 
+
             <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label">Age</label>
-              <input type="text" class="form-control" id="age" placeholder="age">
+              <label for="formGroupExampleInput2" class="form-label">price</label>
+              <input type="text" class="form-control" id="price" placeholder="price">
             </div>
+            <input type="text" id="row" style="display: none;" >
+<!--   
+            <select class="form-select" aria-label="Default select example" id="select" onchange="option()">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select> -->
+            <input type="text" name="" id="type" value="create" style="display: none;">
+            <input type="text" id="row" style="display: none;">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="submitButton" data-bs-dismiss="modal" onclick="sendDataToAPI()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <form id="formUpdate">
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- BODY section  -->
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="userName" placeholder="Full Name">
+            </div>
+
+            
+
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">phone</label>
+              <input type="text" class="form-control" id="userNumber" placeholder="Enter you Phone">
+            </div>
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Email</label>
+              <input type="text" class="form-control" id="email" placeholder="Email">
+            </div>
+
 
 
             <div class="mb-3">
@@ -118,16 +178,16 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="btn" data-bs-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-primary" id="submit" data-bs-dismiss="modal" onclick="updateRow(employeeId)">Submit</button>
           </div>
         </div>
       </div>
     </div>
+  </form>
 
   </div>
 
 <!-- the toast nav -->
-<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
 
 </div>
 

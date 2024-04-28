@@ -40,6 +40,7 @@ function sendDataToAPI() {
     .then(response => response.json())
     .then(data => {
       console.log('Response from API:', data);
+      reloadTableData();
     })
     .catch(error => {
       console.error('Error:', error);
@@ -47,7 +48,7 @@ function sendDataToAPI() {
 }
 
 const submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', sendDataToAPI(personId));
+submitButton.addEventListener('click', sendDataToAPI());
 
 function deleteRow(personId) {
   
