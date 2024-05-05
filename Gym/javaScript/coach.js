@@ -1,4 +1,13 @@
-fetch('https://localhost:7209/api/Employee').then((data) => {
+var token =localStorage.getItem('authToken');
+if(!token){
+  console.log('authtoken not found ');
+ 
+}
+console.log(token);
+// const productApi=   fetch('https://localhost:7209/api/Employee',{headers:{'Authorization':`Bearer${token}`}})
+
+
+fetch('https://localhost:7209/api/Employee',{headers:{'Authorization':`Bearer${token}`}}).then((data) => {
   return data.json();
 }).then((ObjectData) => {
   let tableData = "";
@@ -123,7 +132,7 @@ function updateRow(employeeId) {
         console.error('حدث خطأ في الاتصال بالـ API', error);
       });
   }
-  var employeeId =1
+  
   const form = document.getElementById('formUpdate');
   form.addEventListener('submit',updateRow(employeeId));
   
