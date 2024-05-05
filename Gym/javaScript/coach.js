@@ -1,4 +1,4 @@
-fetch("https://localhost:7209/api/Employee").then((data) => {
+fetch('https://localhost:7209/api/Employee').then((data) => {
   return data.json();
 }).then((ObjectData) => {
   let tableData = "";
@@ -123,7 +123,7 @@ function updateRow(employeeId) {
         console.error('حدث خطأ في الاتصال بالـ API', error);
       });
   }
-  
+  var employeeId =1
   const form = document.getElementById('formUpdate');
   form.addEventListener('submit',updateRow(employeeId));
   

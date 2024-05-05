@@ -118,6 +118,6 @@ function updateRow(personId) {
       console.error('حدث خطأ في الاتصال بالـ API', error);
     });
 }
-
+var personId=2;
 const form = document.getElementById('form');
 form.addEventListener('submit',updateRow(personId));

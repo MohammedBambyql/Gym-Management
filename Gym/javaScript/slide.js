@@ -1,6 +1,6 @@
 const navItems = document.querySelectorAll(".nav-item");
 const page =document.getElementById ("page");
-const page_src=["./home.html","../views/view_view.htm","../views/newView.html","about.html","../plan/tableOfPlan.htm","../Home/about.html"]
+const page_src=["../Home/home.html","../Home/ViewMembers.htm","../Home/coach.html","../plan/tableOfPlan.htm","../Home/about.html"]
 
 navItems.forEach((navItem, i) => {
   navItem.addEventListener("click", () => {

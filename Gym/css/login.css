@@ -142,5 +142,12 @@ input:valid~label {
 .register p a:hover {
     text-decoration: underline;
 }
+#text{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+    color: red;
+
+}
 
 /* //https://user-images.githubusercontent.com/13468728/233847739-219cb494-c265-4554-820a-bd3424c59065.jpg */
