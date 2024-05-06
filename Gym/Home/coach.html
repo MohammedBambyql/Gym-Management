@@ -84,52 +84,81 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">اضافه مدرب جديد</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <!-- BODY section  -->
             <div class="mb-3">
-              <label for="formGroupExampleInput" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="userName" placeholder="Full Name">
+              <label for="formGroupExampleInput" class="form-label">رقم البطاقه</label>
+              <input type="text" class="form-control" id="idcard" placeholder="idcard">
             </div>
 
             <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label">Email</label>
-              <input type="text" class="form-control" id="email" placeholder="Email">
+              <label for="formGroupExampleInput" class="form-label">الاسم الكامل</label>
+              <input type="text" class="form-control" id="name" placeholder="name">
+            </div>
+            
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">الجوال</label>
+              <input type="text" class="form-control" id="phoneNumber" placeholder="Enter you Phone">
+            </div>
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">تاريخ الميلاد</label>
+              <input type="date" class="form-control" id="birthDate" placeholder="barthDate">
+            </div>
+
+
+
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">الايميل</label>
+              <input type="email" class="form-control" id="email" placeholder="email">
             </div>
 
 
             <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label">phone</label>
-              <input type="text" class="form-control" id="userNumber" placeholder="Enter you Phone">
+              <label for="formGroupExampleInput2" class="form-label">تاريخ التوظيف </label>
+              <input type="date" class="form-control" id="hireDate" placeholder="hiredate">
             </div>
 
-
-
+            
             <div class="mb-3">
-              <label for="formGroupExampleInput2" class="form-label">price</label>
-              <input type="text" class="form-control" id="price" placeholder="price">
+              <label for="formGroupExampleInput2" class="form-label">تاريخ الاستقاله </label>
+              <input type="date" class="form-control" id="resingnationDate" placeholder="resingnationDate">
             </div>
-            <input type="text" id="row" style="display: none;" >
-<!--   
-            <select class="form-select" aria-label="Default select example" id="select" onchange="option()">
+
+            <select class="form-select" aria-label="Default select example" id="currentJob" onchange="">
               <option selected>Open this select menu</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
-            </select> -->
-            <input type="text" name="" id="type" value="create" style="display: none;">
-            <input type="text" id="row" style="display: none;">
+            </select> 
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">السعر</label>
+              <input type="text" class="form-control" id="price" placeholder="price">
+            </div>
+            
+            
+           
+
+
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" id="submitButton" data-bs-dismiss="modal" onclick="sendDataToAPI()">Submit</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">تراجع</button>
+            <button type="button" class="btn btn-primary" id="submitButton" data-bs-dismiss="modal">اضافه</button>
           </div>
         </div>
       </div>
     </div>
   </form>
+
+
+
+
+<!--   
   <form id="formUpdate">
     <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -140,7 +169,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <!-- BODY section  -->
+             BODY section  
             <div class="mb-3">
               <label for="formGroupExampleInput" class="form-label">Full Name</label>
               <input type="text" class="form-control" id="userName" placeholder="Full Name">
@@ -166,13 +195,13 @@
               <input type="text" class="form-control" id="price" placeholder="price">
             </div>
             <input type="text" id="row" style="display: none;" >
-<!--   
+   
             <select class="form-select" aria-label="Default select example" id="select" onchange="option()">
               <option selected>Open this select menu</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
-            </select> -->
+            </select> 
             <input type="text" name="" id="type" value="create" style="display: none;">
             <input type="text" id="row" style="display: none;">
           </div>
@@ -183,14 +212,14 @@
         </div>
       </div>
     </div>
-  </form>
+  </form> -->
 
   </div>
 
 <!-- the toast nav -->
 
 </div>
-
+<!--  قائمه الاشعارات
 <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
   <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
@@ -203,7 +232,10 @@
       Hello, world! This is a toast message.
     </div>
   </div>
-</div>
+</div> -->
+
+ 
+
 
   <!-- end the toast  -->
   <!-- <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script> -->

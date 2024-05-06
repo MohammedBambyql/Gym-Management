@@ -66,7 +66,7 @@ if(userName=="" ||password==""){
     const token =data.token;
     localStorage.setItem('authToken',token);
     console.log('the token is ',token);
-      window.location.href = "../Home/slide.html";
+      window.location.href = "../Home/template.html";
 
    
 
