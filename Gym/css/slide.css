@@ -135,12 +135,12 @@ main {
   margin-left: 10px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .nav-item b:nth-child(1) {
   position: absolute;
-  top: -15px;
+  top: -8px;
   height: 15px;
   width: 100%;
   background: #fff;
@@ -160,7 +160,7 @@ main {
 
 .nav-item b:nth-child(2) {
   position: absolute;
-  bottom: -15px;
+  bottom: -5px;
   height: 15px;
   width: 100%;
   background: #fff;
@@ -219,13 +219,14 @@ main {
 .logout{
   position: absolute;
   bottom: 10px;
-  left: 40px;
+  
+  left: 55px;
   
  
 }
 .logout i {
   padding:20px;
-  font-size: 40px;
+  font-size: 30px;
   color: #fff;
   cursor: pointer;
 }

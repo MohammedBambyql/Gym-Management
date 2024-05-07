@@ -30,15 +30,15 @@
 </head>
 
 <body>
-<h2 id="h"></h2>
+
     <div class="container">
         <div class="nav">
             <img src="../img/logo.png" alt="">
             <div class="text">
-                <h2>قسم إدارة الاعضاء  </h2>
+                <h2>قسم إدارة الاشتراك  </h2>
 
             </div>
-            <button id="create_btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
                 اضافة متدرب
             </button>
 
@@ -48,29 +48,28 @@
         <section>
             <table class="table">
                 <thead>
-                    <th> الرقم الوطني</th>
-                    <th>اسم المتدرب</th>
-                    <th>رقم الموبايل</th>
-                    <th>يوم الميلاد</th>
-                    <th> الايميل</th>
-                    <th> الوزن</th>
-                    <th> الحاله</th>
-                    <th>تعديل</th>
-                    <th>حذف</th>
+                    <th> id المدرب</th>
+                    <th>نوع الوظيفه</th>
+                    <th>رقم مدخل البيانات </th>
+                    <th>نوع التمرين</th>
+                    <th> اسم المشترك </th>
+                    <th>الحاله</th>
+                    <th>الفتره</th>
+                    <th>نوع الاشتراك</th>
+                    <th>سعر الاشتراك</th>
                 </thead>
                 <tbody id="tbody">
                     <tr>
-                        <td>1</td>
-                        <td>مفتي حخران</td>
-                        <td>121</td>
-                        <td>777</td>
-                        <td>شهري</td>
-                        <td>60</td>
-                        <td>نشط</td>
-                        <td><button type="button" data-bs-target="#staticBackdrop2" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
-                                id="Edit">تعديل</button></td>
-                        <td><button  class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
-                            style="background-color: red;" onclick="deleteRow(personId)">حذف</button></td>
+                        <td>id المدرب</td>
+                        <td>نوع الوظيفه</td>
+                        <td>رقم مدخل البيانات </td>
+                        <td>نوع التمرين</td>
+                        <td>اسم المشترك </td>
+                        <td>الحاله</td>
+                        <td>الفتره</td>
+                        <td>نوع الاشتراك</td>
+                        <td>سعر الاشتراك</td>
+                       
                     </tr>
                 </tbody>
 
@@ -83,7 +82,7 @@
         <!-- Button trigger modal -->
 
         <!-- Modal -->
-        <form id="form" >
+        <form id="form">
             <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -95,53 +94,38 @@
                         </div>
                         <div class="modal-body">
                             <!-- BODY section  -->
-
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">الرقم الوطني</label>
-                                <input type="text" class="form-control" id="idcard" placeholder=" ادخل الاسم"
-                                    >
-                            </div>
-
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">اسم المتدرب</label>
-                                <input type="text" class="form-control" id="name" placeholder=" ادخل الاسم"
-                                   >
+                                <input type="text" class="form-control" id="name-member" placeholder=" ادخل الاسم"
+                                    name="name-member">
                             </div>
                             
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">رقم الجوال</label>
-                                <input type="number" class="form-control" id="phoneNumber" placeholder="ادخل الرقم"
-                                    name="phoneNumber">
+                                <input type="number" class="form-control" id="phone" placeholder="ادخل الرقم"
+                                    name="phone">
                             </div>
 
 
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label"> يوم الميلاد</label>
-                                <input type="date" class="form-control" id="birthDate" placeholder="اسم المتدرب" name="birthDate">
+                                <input type="date" class="form-control" id="coach-name" placeholder="اسم المتدرب" name="birth_date">
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">  الايميل</label>
-                                <input type="email" class="form-control" id="email" placeholder=" ادخل الايميل" name="email">
-                            </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">  الوزن</label>
-                                <input type="email" class="form-control" id="memberWeight" placeholder=" ادخل الايميل" name="memberWeight">
-                            </div>
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">  الحاله</label>
-                                <input type="email" class="form-control" id="isActive" placeholder=" ادخل الايميل" name="isActive">
+                                <input type="email" class="form-control" id="coach-name" placeholder=" ادخل الايميل" name="email">
                             </div>
                                 <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
                             <button type="submit" class="btn btn-primary" id="submitButton"
-                                data-bs-dismiss="modal" onclick="sendDataToAPI()" >موافق</button>
+                                data-bs-dismiss="modal" onclick="sendDataToAPI()">موافق</button>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
 
-<!--         
+        
         <form id="formUpdate">
             <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -153,7 +137,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            BODY section 
+                            <!-- BODY section  -->
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">اسم المتدرب</label>
                                 <input type="text" class="form-control" id="name-member" placeholder=" ادخل الاسم"
@@ -183,14 +167,14 @@
                     </div>
                 </div>
             </div>
-        </form> -->
+        </form>
 
 
     </div>
 
 
     <!-- <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script> -->
-    <script src="../javaScript/members.js"></script>
+    <script src="../javaScript/Subscription.js"></script>
     <script src="../Libraries/Jq+bot/bootstrap.bundle.min.js"></script>
 </body>
 <!-- <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>

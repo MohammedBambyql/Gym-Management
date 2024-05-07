@@ -17,8 +17,8 @@
 //   document.getElementById("tbody").innerHTML = tableData;
 // })
 
-// const token=localStorage.getItem('authToken');
-var token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InVzZXIxMjM0Iiwicm9sZSI6WyJ1c2VyMTIzNCIsIkFkbWluIiwiVXNlciIsIk1lbWJlciJdLCJuYmYiOjE3MTUwODIwNDIsImV4cCI6MTcxNTA4NTY0MiwiaWF0IjoxNzE1MDgyMDQyLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0In0.E4qHBugSds6N90GPjnegjXvQuu-UVqg9JFmg2xReSwI'
+const token=localStorage.getItem('authToken');
+// var token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InVzZXIxMjM0Iiwicm9sZSI6WyJ1c2VyMTIzNCIsIkFkbWluIiwiVXNlciIsIk1lbWJlciJdLCJuYmYiOjE3MTUwODIwNDIsImV4cCI6MTcxNTA4NTY0MiwiaWF0IjoxNzE1MDgyMDQyLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0In0.E4qHBugSds6N90GPjnegjXvQuu-UVqg9JFmg2xReSwI'
 
 const getUrl='https://localhost:7209/api/JobHistory/Get';
 

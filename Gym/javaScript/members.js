@@ -1,8 +1,8 @@
 
 
-// var token=localStorage.getItem('authToken');
+var token=localStorage.getItem('authToken');
 
-var token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InVzZXIxMjM0Iiwicm9sZSI6WyJ1c2VyMTIzNCIsIkFkbWluIiwiVXNlciIsIk1lbWJlciJdLCJuYmYiOjE3MTUwODIwNDIsImV4cCI6MTcxNTA4NTY0MiwiaWF0IjoxNzE1MDgyMDQyLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0In0.E4qHBugSds6N90GPjnegjXvQuu-UVqg9JFmg2xReSwI'
+// var token='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InVzZXIxMjM0Iiwicm9sZSI6WyJ1c2VyMTIzNCIsIkFkbWluIiwiVXNlciIsIk1lbWJlciJdLCJuYmYiOjE3MTUxMDE0ODQsImV4cCI6MTcxNTEwNTA4NCwiaWF0IjoxNzE1MTAxNDg0LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0In0.y_epzDxvDOqr7xn96nVrrb9J0y95XOXwnZDkYvC6pDc'
 var url ='https://localhost:7209/api/Member/GetMembers';
 
 // --------------------------------Show data---------------------------------------
@@ -51,31 +51,45 @@ function showDate(url,token){
 // -------------------------------------------end -----------------------------------------
 
 
+// var icare=document.getElementById('idcard');
 
-
+// var namee= document.getElementById('name');
+//   var     phoneNumber=document.getElementById('phoneNumber');
+//  var email=document.getElementById('email');
+//  console.log(namee)
 // function sendDataToAPI() {
-//   const form = document.getElementById('form');
-//   const payload = new FormData(form);
+//   // const form = document.getElementById('form');
+// const i=idcard.value;
+//   // var data ={
+    
+//   //     "idcard":i ,
+//   //     "name":namee.value,
+//   //     "phoneNumber":phoneNumber.value,
+//   //     "birthDate":"2024-05-07T17:51:48.073Z",
+//   //     "email":email,
+//   //     "memberWeight": 90,
+//   //     "isActive": true
+    
+//   // }
 
-//   const formData = {};
-//   for (let [key, value] of payload.entries()) {
-//     formData[key] = value;
-//   }
+//   //alert(data)
 
-//   console.log(formData);
+//   console.log(data);
 
-//   fetch('https://localhost:7209/api/Person', {
+//   fetch('https://localhost:7209/api/Member/CreateMember', {
 //     method: 'POST',
-//     body: JSON.stringify(formData),
+   
 //     headers: {
 //       'Content-Type': 'application/json',
-//       'Accept': 'application/json'
-//     }
+//       'Accept': 'application/json',
+//       'Authorization':`Bearer ${token}`
+//     }, 
+//     body: JSON.stringify(data)
 //   })
 //     .then(response => response.json())
 //     .then(data => {
 //       console.log('Response from API:', data);
-//       reloadTableData();
+//       showDate(url,token);
 //     })
 //     .catch(error => {
 //       console.error('Error:', error);
@@ -83,7 +97,10 @@ function showDate(url,token){
 // }
 
 // const submitButton = document.getElementById('submitButton');
-// submitButton.addEventListener('click', sendDataToAPI());
+// submitButton.addEventListener('submit', sendDataToAPI());
+
+
+//const submitButton = document.getElementById('form');submitButton.onclick=sendDataToAPI();
 
 // function deleteRow(personId) {
   
