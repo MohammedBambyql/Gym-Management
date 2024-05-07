@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add plan</title>
+    <title>members</title>
 
     <style>
         .container {
@@ -35,7 +35,7 @@
         <div class="nav">
             <img src="../img/logo.png" alt="">
             <div class="text">
-                <h2>قسم إدارة المتدربيين </h2>
+                <h2>قسم إدارة الاعضاء  </h2>
 
             </div>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
@@ -48,11 +48,13 @@
         <section>
             <table class="table">
                 <thead>
-                    <th>الرقم</th>
+                    <th> الرقم الوطني</th>
                     <th>اسم المتدرب</th>
                     <th>رقم الموبايل</th>
                     <th>يوم الميلاد</th>
                     <th> الايميل</th>
+                    <th> الوزن</th>
+                    <th> الحاله</th>
                     <th>تعديل</th>
                     <th>حذف</th>
                 </thead>
@@ -63,6 +65,8 @@
                         <td>121</td>
                         <td>777</td>
                         <td>شهري</td>
+                        <td>60</td>
+                        <td>نشط</td>
                         <td><button type="button" data-bs-target="#staticBackdrop2" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
                                 id="Edit">تعديل</button></td>
                         <td><button  class="btn btn-secondary" data-bs-dismiss="modal" id="Delete"
@@ -121,6 +125,8 @@
                 </div>
             </div>
         </form>
+
+        
         <form id="formUpdate">
             <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -169,7 +175,7 @@
 
 
     <!-- <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script> -->
-    <script src="../javaScript/view.js"></script>
+    <script src="../javaScript/members.js"></script>
     <script src="../Libraries/Jq+bot/bootstrap.bundle.min.js"></script>
 </body>
 <!-- <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>

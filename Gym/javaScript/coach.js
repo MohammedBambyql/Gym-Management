@@ -1,5 +1,5 @@
-// var token =localStorage.getItem('authToken');
-var token ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InVzZXIxMjM0Iiwicm9sZSI6WyJ1c2VyMTIzNCIsIkFkbWluIiwiVXNlciIsIk1lbWJlciJdLCJuYmYiOjE3MTUwMzY2ODEsImV4cCI6MTcxNTA0MDI4MSwiaWF0IjoxNzE1MDM2NjgxLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0In0.9RNxBk-nq8RDk7KBD9_69l884gYiWTCMi8BN3H2CwHw'
+var token =localStorage.getItem('authToken');
+// var token ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InVzZXIxMjM0Iiwicm9sZSI6WyJ1c2VyMTIzNCIsIkFkbWluIiwiVXNlciIsIk1lbWJlciJdLCJuYmYiOjE3MTUwMzY2ODEsImV4cCI6MTcxNTA0MDI4MSwiaWF0IjoxNzE1MDM2NjgxLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdCIsImF1ZCI6Imh0dHBzOi8vbG9jYWxob3N0In0.9RNxBk-nq8RDk7KBD9_69l884gYiWTCMi8BN3H2CwHw'
 const url='https://localhost:7209/api/Employee/GetEmployees'
 
 // ----------------------inputs --------------------------------
@@ -12,6 +12,8 @@ var hireDate=document.getElementById('hireDate');
 var resignationDate=document.getElementById('resignationDate');
 var currentJop=document.getElementById('currentJob');
 var salary=document.getElementById('salary');
+var f=document.getElementById('formPost');
+
 // --------------------------end inputs-------------------------------
 
 if(!token){
@@ -91,18 +93,16 @@ data={
 //  -------------------------- sendfunction --------------------------------------------------
 
 function sendDataToAPI(url,token,data){
-  
+   
    const response=new XMLHttpRequest();
   response.open('POST',url)
   response.setRequestHeader('Authorization',`Bearer ${token}`);
   response.setRequestHeader( 'Content-Type','application/json')
   console.log('1')
-  console.log(formData)
+  console.log(data)
   response.send(JSON.stringify(data));
  }
 
- const submitButton = document.getElementById('submitButton');
- submitButton.addEventListener('click', sendDataToAPI());
 
 // ----------------------------------------- end --------------------------------------------------
   
@@ -146,6 +146,7 @@ function deleteRow(employeeId){
 function reloadTableData() {
     showDate(url,token);
   }
+
 // -------------------------------------------end function ------------------------------------
   
 function updateRow() {
@@ -162,7 +163,7 @@ function updateRow() {
         reloadTableData();
       }
       else{
-        console.log('wrong to connecting');
+        console.log('غمليه التعديل فيها مشكله ');
       }
     }
 
@@ -187,7 +188,10 @@ function updateRow() {
     //   .catch(error => {
     //     console.error('حدث خطأ في الاتصال بالـ API', error);
     //   });
-  }
-  const form = document.getElementById('form');
-  form.addEventListener('submit',updateRow(employeeId));
+  // }
+
+
+
+  // const form = document.getElementById('form');
+  // form.addEventListener('submit',updateRow(employeeId));
   
